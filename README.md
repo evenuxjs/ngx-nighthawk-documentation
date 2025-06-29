@@ -1,59 +1,49 @@
-# NighthawkDocumentationWeb
+<a href="https://nighthawk.evenux.com">
+<div align="center">
+    <img class="mx-auto center-block d-block" src="https://nighthawk.evenux.com/images/logo-small.png" alt="ngx-nighthawk" />
+</div>
+</a>
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
+## Links
 
-## Development server
+- [Documentation](https://nighthawk.evenux.com)
+- [Release Notes](https://nighthawk.evenux.com/changelog)
+- [Known Issues](https://nighthawk.evenux.com/issues)
 
-To start a local development server, run:
+## Getting Started
 
-```bash
-ng serve
-```
+ngx-nighthawk is a custom Angular library, that includes a few different packages, that the library is built on.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Check our [Getting started guide](https://nighthawk.evenux.com/quick-start) if it's your first project with Angular Nighthawk Dekit.
 
-## Code scaffolding
+## Supporting
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+ngx-nighthawk is an Open Source (MIT Licensed) project, it's an independent project with ongoing development made possible thanks to the support of our awesome backers.
+If you also would like to show support or simply give back to Open Source community, please consider donating for our cause via PayPal: [PayPal.com/HenrikWesterholm](https://paypal.me/henrikwesterholm)
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+### How to build lib for development
 
 ```bash
-ng build
+git clone https://github.com/evenuxjs/ngx-nighthawk
+cd ngx-nighthawk
+npm ci
+ng build ngx-nighthawk
+cd dist/ngx-nighthawp
+npm pack
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Contribution
 
-## Running unit tests
+All contributions are welcome! And remember, contribution is not only PRs and code, but any help with docs or helping other developers to solve issues are very appreciated! Thanks in advance!
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Credits
 
-```bash
-ng test
-```
+The project is written by the EVENUX organization, lead by [Henrik Westerholm](https://westerholm.dev).
 
-## Running end-to-end tests
+### License
 
-For end-to-end (e2e) testing, run:
+[MIT](https://github.com/evenuxjs/ngx-nighthawk/blob/main/LICENSE)
 
-```bash
-ng e2e
-```
+### Hire us
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+We here at [EVENUX](https://evenux.com) are dedicated to building innovative software and providing elegant, simple and scalable code.
