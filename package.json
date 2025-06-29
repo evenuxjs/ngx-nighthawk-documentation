@@ -26,7 +26,7 @@
     "@angular/ssr": "^20.0.4",
     "express": "^4.18.2",
     "ngx-highlightjs": "^12.0.0",
-    "ngx-nighthawk": "file:ngx-nighthawk-8.0.0.tgz",
+    "ngx-nighthawk": "^8.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
