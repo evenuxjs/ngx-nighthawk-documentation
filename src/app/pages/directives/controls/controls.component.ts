@@ -12,7 +12,7 @@ export class ControlsComponent {
   // --------------------------------------------- HTML CODE --------------------------------------------------
 
   public htmlCode = `<input 
-  nighthawk-form-control 
+  nighthawkFormControl 
   type="text" 
   color="primary" 
   size="large" 

@@ -25,7 +25,7 @@ export class ImageLoaderComponent {
   // --------------------------------------------- HTML CODE --------------------------------------------------
 
   public htmlCode = `<img
-  nighthawk-image-loader
+  nighthawkImageLoader
   imageSrc="https://picsum.photos/id/200/2560/1440"
   [width]="2560"
   [height]="1440"

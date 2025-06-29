@@ -33,7 +33,7 @@ export class FirstKeyComponent {
 
   public htmlCode = `<form [formGroup]="form">
   <input 
-    nighthawk-form-control 
+    nighthawkFormControl 
     type="email"  
     color="transparent" 
     [border]="true"

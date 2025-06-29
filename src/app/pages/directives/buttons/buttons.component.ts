@@ -11,7 +11,7 @@ import { NighthawkButtonDirective, NighthawkHighlightComponent, NighthawkTabComp
 export class ButtonsComponent {
   // --------------------------------------------- HTML CODE --------------------------------------------------
 
-  public htmlCode = `<button nighthawk-button color="transparent" size="medium" [border]="true"  [rounded]="true" [disabled]="false">
+  public htmlCode = `<button nighthawkButton color="transparent" size="medium" [border]="true"  [rounded]="true" [disabled]="false">
     Button
 </button>`;
 

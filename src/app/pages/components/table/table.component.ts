@@ -61,10 +61,10 @@ export class TableComponent {
       {{ row.email }}
     </ng-template>
     <ng-template #cell let-row="row">
-      {{ row.date_of_birth | dateFormat: 'DD.MM.YYYY' : true }}
+      {{ row.date_of_birth | dateFormat: 'dd.MM.yyyy' : true }}
     </ng-template>
     <ng-template #cell let-row="row">
-      {{ row.created_at | dateFormat: 'DD.MM.YYYY - HH:mm:ss' : true }}
+      {{ row.created_at | dateFormat: 'dd.MM.yyyy - HH:mm:ss' : true }}
     </ng-template>
   </div>
 </nighthawk-table>`;

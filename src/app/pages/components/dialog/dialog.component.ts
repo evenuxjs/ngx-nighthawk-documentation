@@ -39,7 +39,7 @@ export class DialogComponent {
     <h5 class="mb-3">Sample dialog</h5>
     <p class="mb-5">This is a sample dialog that can contain whatever necessary.</p>
     <div class="footer">
-      <button nighthawk-button type="button" color="primary" [rounded]="true" [border]="true" (click)="dialogRef.close()">
+      <button nighthawkButton type="button" color="primary" [rounded]="true" [border]="true" (click)="dialogRef.close()">
         Close
       </button>
     </div>
@@ -47,13 +47,13 @@ export class DialogComponent {
 </div>
 
 <!-- Parent component that opens dialogs -->
-<button nighthawk-button type="button" color="primary" size="medium" [rounded]="true" [border]="true" (click)="requestConfirmation()" class="me-2">
+<button nighthawkButton type="button" color="primary" size="medium" [rounded]="true" [border]="true" (click)="requestConfirmation()" class="me-2">
   Request confirmation
 </button>
-<button nighthawk-button type="button" color="primary" size="medium" [rounded]="true" [border]="true" (click)="showNotification()" class="me-2">
+<button nighthawkButton type="button" color="primary" size="medium" [rounded]="true" [border]="true" (click)="showNotification()" class="me-2">
   Show notification
 </button>
-<button nighthawk-button type="button" color="primary" size="medium" [rounded]="true" [border]="true" (click)="openDialog()">
+<button nighthawkButton type="button" color="primary" size="medium" [rounded]="true" [border]="true" (click)="openDialog()">
   Open custom dialog
 </button>`;
 

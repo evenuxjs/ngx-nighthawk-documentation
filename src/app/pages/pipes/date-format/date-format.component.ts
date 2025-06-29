@@ -20,10 +20,10 @@ export class DateFormatComponent {
   // --------------------------------------------- HTML CODE --------------------------------------------------
 
   public htmlCode = `<!-- For current datetime -->
-{{ now | dateFormat : "DD.MM.YYYY - HH:mm:ss" }}
+{{ now | dateFormat : "dd.MM.yyyy - HH:mm:ss" }}
  
 <!-- For database datetime (last argument is set to true) -->
-{{ now | dateFormat : "DD.MM.YYYY - HH:mm:ss" : true }}`;
+{{ now | dateFormat : "dd.MM.yyyy - HH:mm:ss" : true }}`;
 
   // ------------------------------------------ TYPESCRIPT CODE -----------------------------------------------
 

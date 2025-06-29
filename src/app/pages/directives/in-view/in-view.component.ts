@@ -11,7 +11,7 @@ import { NighthawkInViewDirective, NighthawkHighlightComponent, NighthawkTabsCom
 export class InViewComponent {
   // --------------------------------------------- HTML CODE --------------------------------------------------
 
-  public htmlCode = `<div class="visibility-test-container" nighthawk-in-view (inView)="setInViewState($event)">
+  public htmlCode = `<div class="visibility-test-container" nighthawkInView (inView)="setInViewState($event)">
   <p class="mb-0">
       Current status: {{ isDivInView ? "VISIBLE" : "NOT IN VIEW" }}.
   </p>

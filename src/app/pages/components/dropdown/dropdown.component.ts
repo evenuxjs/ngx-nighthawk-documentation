@@ -26,7 +26,7 @@ import {
 export class DropdownComponent {
   // --------------------------------------------- HTML CODE --------------------------------------------------
 
-  public htmlCode = `<button nighthawk-button nighthawk-dropdown-trigger color="primary" size="large" [rounded]="true"
+  public htmlCode = `<button nighthawkButton nighthawkDropdownTrigger color="primary" size="large" [rounded]="true"
   [border]="true" [dropdownTrigger]="dropdownRef" [direction]="'end'" [dropdownOffset]="0"
   [dropdownHideDelay]="0" [dropdownOnHover]="false" [dropdownCloseOnClickInside]="false"
   [dropdownCloseOnRouteChange]="true" dropdownPanelClass="custom-dropdown" class="me-2" (closed)="onDropdownClosed()"
@@ -34,7 +34,7 @@ export class DropdownComponent {
   Click to open
 </button>
 
-<button nighthawk-button nighthawk-dropdown-trigger color="primary" size="large" [rounded]="true"
+<button nighthawkButton nighthawkDropdownTrigger color="primary" size="large" [rounded]="true"
   [border]="true" [dropdownTrigger]="dropdownRef" [direction]="'end'" [dropdownOffset]="0"
   [dropdownHideDelay]="0" [dropdownOnHover]="true" [dropdownCloseOnClickInside]="false"
   [dropdownCloseOnRouteChange]="true" dropdownPanelClass="custom-dropdown" (closed)="onDropdownClosed()"
