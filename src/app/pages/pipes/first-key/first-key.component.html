@@ -1,0 +1,46 @@
+<app-layout heading="First key">
+  <div class="block">
+    <h1>Preview</h1>
+
+    <p class="mb-0">
+      First key pipe can effectively be used for
+      <strong>form control validation</strong> as an example.
+    </p>
+    <p>If you look at the demo code, you can see it's a very simple and elegant solution.</p>
+
+    <form [formGroup]="form">
+      <input
+        nighthawk-form-control
+        type="email"
+        formControlName="email"
+        color="transparent"
+        [border]="true"
+        [rounded]="true"
+        class="mb-2"
+        placeholder="Enter email address"
+      />
+
+      <div class="text-danger">
+        <p *ngIf="(form.controls['email'].errors | firstKey) === 'minlength'">Email address too short</p>
+        <p *ngIf="(form.controls['email'].errors | firstKey) === 'maxlength'">Email address too long</p>
+        <p *ngIf="(form.controls['email'].errors | firstKey) === 'email'">Invalid email format</p>
+      </div>
+    </form>
+  </div>
+
+  <div class="block">
+    <h1>Demo code</h1>
+
+    <nighthawk-tabs [plainTabsContent]="true" tabsButtonSize="small">
+      <nighthawk-tab tabLabel="HTML">
+        <nighthawk-highlight [code]="htmlCode" language="html" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="TypeScript">
+        <nighthawk-highlight [code]="tsCode" language="typescript" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="SCSS">
+        <nighthawk-highlight [code]="scssCode" language="scss" />
+      </nighthawk-tab>
+    </nighthawk-tabs>
+  </div>
+</app-layout>

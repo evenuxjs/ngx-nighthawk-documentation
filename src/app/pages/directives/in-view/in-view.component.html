@@ -1,0 +1,58 @@
+<app-layout heading="In-View">
+  <div class="block">
+    <h1>Preview</h1>
+
+    <div style="height: 800px">
+      <p class="mb-0">
+        The red bordered div below this div is:
+        <strong>{{ isDivInView ? "VISIBLE" : "NOT IN VIEW" }}</strong
+        >.
+      </p>
+      <p class="mb-0">This directive can be used to initialize animations for example.</p>
+    </div>
+
+    <div class="visibility-test-container" nighthawk-in-view (inView)="setInViewState($event)">
+      <p class="mb-0">This div is being checked if it's visible or not.</p>
+      <p class="mb-0">Current status: {{ isDivInView ? "VISIBLE" : "NOT IN VIEW" }}.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Demo code</h1>
+
+    <nighthawk-tabs [plainTabsContent]="true" tabsButtonSize="small">
+      <nighthawk-tab tabLabel="HTML">
+        <nighthawk-highlight [code]="htmlCode" language="html" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="TypeScript">
+        <nighthawk-highlight [code]="tsCode" language="typescript" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="SCSS">
+        <nighthawk-highlight [code]="scssCode" language="scss" />
+      </nighthawk-tab>
+    </nighthawk-tabs>
+  </div>
+
+  <div class="block">
+    <h1>Outputs</h1>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"><strong>Event</strong></th>
+            <th scope="col"><strong>Type</strong></th>
+            <th scope="col"><strong>Value</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>inView</strong></td>
+            <td>boolean</td>
+            <td>Emits the visibility status of an element with the directive</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</app-layout>

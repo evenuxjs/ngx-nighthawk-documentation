@@ -1,0 +1,149 @@
+<app-layout heading="Range picker">
+  <div class="block">
+    <h1>Preview</h1>
+
+    <div class="row">
+      <div class="col-12 col-xl mb-2 mb-xl-0">
+        <p>Large</p>
+        <nighthawk-range-picker [min]="0" [max]="500" [valueA]="100" [valueB]="300" size="large" />
+      </div>
+      <div class="col-12 col-xl mb-2 mb-xl-0">
+        <p>Medium</p>
+        <nighthawk-range-picker [min]="0" [max]="500" [valueA]="100" [valueB]="300" size="medium" />
+      </div>
+      <div class="col-12 col-xl mb-2 mb-xl-0">
+        <p>Small</p>
+        <nighthawk-range-picker [min]="0" [max]="500" [valueA]="100" [valueB]="300" size="small" />
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Demo code</h1>
+
+    <nighthawk-tabs [plainTabsContent]="true" tabsButtonSize="small">
+      <nighthawk-tab tabLabel="HTML">
+        <nighthawk-highlight [code]="htmlCode" language="html" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="TypeScript">
+        <nighthawk-highlight [code]="tsCode" language="typescript" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="SCSS">
+        <nighthawk-highlight [code]="scssCode" language="scss" />
+      </nighthawk-tab>
+    </nighthawk-tabs>
+  </div>
+
+  <div class="block">
+    <h1>Inputs</h1>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"><strong>Option</strong></th>
+            <th scope="col"><strong>Type</strong></th>
+            <th scope="col"><strong>Default value</strong></th>
+            <th scope="col"><strong>Possible values</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>valueA</strong></td>
+            <td>number</td>
+            <td><strong>0</strong></td>
+            <td>0-infinite</td>
+          </tr>
+          <tr>
+            <td><strong>valueB</strong></td>
+            <td>number</td>
+            <td><strong>0</strong></td>
+            <td>0-infinite</td>
+          </tr>
+          <tr>
+            <td><strong>minValue</strong></td>
+            <td>number</td>
+            <td><strong>0</strong></td>
+            <td>0-infinite</td>
+          </tr>
+          <tr>
+            <td><strong>maxValue</strong></td>
+            <td>number</td>
+            <td><strong>100</strong></td>
+            <td>0-infinite</td>
+          </tr>
+          <tr>
+            <td><strong>size</strong></td>
+            <td>enum</td>
+            <td><strong>medium</strong></td>
+            <td>small/medium/large</td>
+          </tr>
+          <tr>
+            <td><strong>step</strong></td>
+            <td>number</td>
+            <td><strong>1</strong></td>
+            <td>1-infinite</td>
+          </tr>
+          <tr>
+            <td><strong>tickCount</strong></td>
+            <td>number</td>
+            <td><strong>5</strong></td>
+            <td>0-infinite</td>
+          </tr>
+          <tr>
+            <td><strong>suffix</strong></td>
+            <td>string</td>
+            <td><strong>-</strong></td>
+            <td>string</td>
+          </tr>
+          <tr>
+            <td><strong>ticks</strong></td>
+            <td>boolean</td>
+            <td><strong>true</strong></td>
+            <td>true/false</td>
+          </tr>
+          <tr>
+            <td><strong>label</strong></td>
+            <td>boolean</td>
+            <td><strong>true</strong></td>
+            <td>true/false</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Outputs</h1>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"><strong>Event</strong></th>
+            <th scope="col"><strong>Type</strong></th>
+            <th scope="col"><strong>Value</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>onValueChange</strong></td>
+            <td>number</td>
+            <td>Emits the 'checked' value</td>
+          </tr>
+          <tr>
+            <td><strong>onMouseClick</strong></td>
+            <td>boolean</td>
+            <td>Emits whether mouse1 is down (dragging)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Style Variables</h1>
+
+    <nighthawk-highlight [code]="scssVariables" language="scss" />
+  </div>
+</app-layout>

@@ -1,0 +1,17 @@
+.mobile-hero {
+  margin-bottom: 14px;
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--accent-color);
+  }
+}
+
+.desktop-hero {
+  img {
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid var(--accent-color);
+  }
+}

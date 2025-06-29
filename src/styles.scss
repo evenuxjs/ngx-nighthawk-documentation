@@ -1,0 +1,157 @@
+// Devkit
+@import "ngx-nighthawk/styles";
+@import "ngx-nighthawk/styles/mixins";
+
+// Icon kit
+@import "../public/icon-kit/css/f-117-icon-kit.css";
+
+// Themes
+@import "./themes/dark/silent-night.scss";
+@import "./themes/dark/ice-cold.scss";
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.block {
+  background-color: var(--highlight-color);
+  border-radius: 8px;
+  padding: 40px;
+  line-height: 32px;
+  margin-bottom: 14px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 0;
+    background-color: transparent;
+    line-height: 21px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    color: var(--heading-color);
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Dosis", sans-serif;
+    margin-bottom: 14px;
+    letter-spacing: 1px;
+    border-bottom: 1px dashed #5b5b5b;
+    padding-bottom: 14px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 15px;
+      padding: 14px;
+      border-bottom: none;
+      background-color: var(--highlight-color);
+      border-radius: 8px;
+    }
+  }
+
+  p {
+    text-align: justify;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 13px;
+      text-align: initial;
+      font-weight: 200;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  strong {
+    color: var(--primary-color);
+    font-weight: normal;
+  }
+}
+
+.hljs {
+  max-height: 600px;
+
+  @include media-breakpoint-down(lg) {
+    background-color: var(--highlight-color);
+  }
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #5b5b5b;
+    border-radius: 8px;
+  }
+
+  table td,
+  table th {
+    padding: 8px;
+    vertical-align: middle;
+  }
+
+  th,
+  td {
+    border-right: 1px solid #5b5b5b;
+    border-bottom: 1px solid #5b5b5b;
+  }
+
+  table thead tr th:first-of-type {
+    border-top-left-radius: 8px;
+  }
+
+  table thead tr th:last-of-type {
+    border-top-right-radius: 8px;
+    border-right: none;
+  }
+
+  table tbody tr td:last-of-type {
+    border-right: none;
+  }
+
+  table tbody tr:last-of-type td {
+    border-bottom: none;
+  }
+
+  table tbody tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 8px;
+  }
+
+  table tbody tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 8px;
+  }
+
+  table tr:nth-child(odd) {
+    background-color: var(--highlight-color);
+  }
+
+  table tr:nth-child(even) {
+    background-color: var(--highlight-color);
+  }
+
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #171821;
+    font-family: "Dosis", sans-serif;
+    letter-spacing: 1px;
+  }
+}
+
+.tab-buttons button {
+  font-size: 11px;
+}
+
+a {
+  color: var(--primary-color);
+}

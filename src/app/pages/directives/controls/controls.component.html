@@ -1,0 +1,140 @@
+<app-layout heading="Controls">
+  <div class="block">
+    <h1>Preview - large</h1>
+
+    <div class="row">
+      <div class="col-12 col-xl mb-2 mb-xl-0">
+        <input nighthawk-form-control type="text" color="primary" size="large" [rounded]="true" [border]="true" placeholder="Input" />
+      </div>
+      <div class="col-12 col-xl mb-2 mb-xl-0">
+        <input nighthawk-form-control type="text" color="secondary" size="large" [rounded]="true" [border]="true" placeholder="Input" />
+      </div>
+      <div class="col-12 col-xl mb-2 mb-xl-0">
+        <input nighthawk-form-control type="text" color="dark" size="large" [rounded]="true" [border]="true" placeholder="Input" />
+      </div>
+      <div class="col-12 col-xl mb-2 mb-xl-0">
+        <input nighthawk-form-control type="text" color="light" size="large" [rounded]="true" [border]="true" placeholder="Input" />
+      </div>
+      <div class="col-12 col-xl mb-2 mb-xl-0">
+        <input nighthawk-form-control type="text" color="transparent" size="large" [rounded]="true" [border]="true" placeholder="Input" />
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Preview - medium</h1>
+
+    <div class="row">
+      <div class="col-12 col-xl mb-2 mb-xl-0">
+        <input nighthawk-form-control type="text" color="primary" size="medium" [rounded]="true" [border]="true" placeholder="Input" />
+      </div>
+      <div class="col-12 col-xl mb-2 mb-xl-0">
+        <input nighthawk-form-control type="text" color="secondary" size="medium" [rounded]="true" [border]="true" placeholder="Input" />
+      </div>
+      <div class="col-12 col-xl mb-2 mb-xl-0">
+        <input nighthawk-form-control type="text" color="dark" size="medium" [rounded]="true" [border]="true" placeholder="Input" />
+      </div>
+      <div class="col-12 col-xl mb-2 mb-xl-0">
+        <input nighthawk-form-control type="text" color="light" size="medium" [rounded]="true" [border]="true" placeholder="Input" />
+      </div>
+      <div class="col-12 col-xl mb-2 mb-xl-0">
+        <input nighthawk-form-control type="text" color="transparent" size="medium" [rounded]="true" [border]="true" placeholder="Input" />
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Preview - small</h1>
+
+    <div class="row">
+      <div class="row">
+        <div class="col-12 col-xl mb-2 mb-xl-0">
+          <input nighthawk-form-control type="text" color="primary" size="small" [rounded]="true" [border]="true" placeholder="Input" />
+        </div>
+        <div class="col-12 col-xl mb-2 mb-xl-0">
+          <input nighthawk-form-control type="text" color="secondary" size="small" [rounded]="true" [border]="true" placeholder="Input" />
+        </div>
+        <div class="col-12 col-xl mb-2 mb-xl-0">
+          <input nighthawk-form-control type="text" color="dark" size="small" [rounded]="true" [border]="true" placeholder="Input" />
+        </div>
+        <div class="col-12 col-xl mb-2 mb-xl-0">
+          <input nighthawk-form-control type="text" color="light" size="small" [rounded]="true" [border]="true" placeholder="Input" />
+        </div>
+        <div class="col-12 col-xl mb-2 mb-xl-0">
+          <input nighthawk-form-control type="text" color="transparent" size="small" [rounded]="true" [border]="true" placeholder="Input" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Demo code</h1>
+
+    <nighthawk-tabs [plainTabsContent]="true" tabsButtonSize="small">
+      <nighthawk-tab tabLabel="HTML">
+        <nighthawk-highlight [code]="htmlCode" language="html" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="TypeScript">
+        <nighthawk-highlight [code]="tsCode" language="typescript" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="SCSS">
+        <nighthawk-highlight [code]="scssCode" language="scss" />
+      </nighthawk-tab>
+    </nighthawk-tabs>
+  </div>
+
+  <div class="block">
+    <h1>Inputs</h1>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"><strong>Option</strong></th>
+            <th scope="col"><strong>Type</strong></th>
+            <th scope="col"><strong>Default value</strong></th>
+            <th scope="col"><strong>Possible values</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>color</strong></td>
+            <td>enum</td>
+            <td><strong>transparent</strong></td>
+            <td>primary/secondary/dark/light/transparent</td>
+          </tr>
+          <tr>
+            <td><strong>size</strong></td>
+            <td>enum</td>
+            <td><strong>medium</strong></td>
+            <td>small/medium/large</td>
+          </tr>
+          <tr>
+            <td><strong>border</strong></td>
+            <td>boolean</td>
+            <td><strong>false</strong></td>
+            <td>true/false</td>
+          </tr>
+          <tr>
+            <td><strong>rounded</strong></td>
+            <td>boolean</td>
+            <td><strong>false</strong></td>
+            <td>true/false</td>
+          </tr>
+          <tr>
+            <td><strong>placeholder</strong></td>
+            <td>string</td>
+            <td><strong>-</strong></td>
+            <td>any string</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Style Variables</h1>
+
+    <nighthawk-highlight [code]="scssVariables" language="scss" />
+  </div>
+</app-layout>

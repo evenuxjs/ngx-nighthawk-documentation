@@ -1,0 +1,140 @@
+<app-layout heading="Tabs">
+  <div class="block">
+    <h1>Preview</h1>
+
+    <nighthawk-table [config]="tableConfig" [data]="tableData" [fetchUrl]="tableDataFetchUrl" (onTableChange)="this.tableConfig = $event">
+      <div>
+        <ng-template #header> ID </ng-template>
+        <ng-template #header> Username </ng-template>
+        <ng-template #header> Name </ng-template>
+        <ng-template #header> Email </ng-template>
+        <ng-template #header> Date of birth </ng-template>
+        <ng-template #header> Created at </ng-template>
+      </div>
+
+      <div>
+        <ng-template #cell let-row="row">
+          {{ row.id }}
+        </ng-template>
+        <ng-template #cell let-row="row">
+          <div class="text-right text-lg-left">
+            <img [src]="row.avatar" alt="{{ row.name }}" style="max-width: 32px; border-radius: 8px; margin-right: 8px" />
+            {{ row.username }}
+          </div>
+        </ng-template>
+        <ng-template #cell let-row="row">
+          {{ row.name }}
+        </ng-template>
+        <ng-template #cell let-row="row">
+          {{ row.email }}
+        </ng-template>
+        <ng-template #cell let-row="row">
+          {{ row.date_of_birth | dateFormat: "DD.MM.YYYY" : true }}
+        </ng-template>
+        <ng-template #cell let-row="row">
+          {{ row.created_at | dateFormat: "DD.MM.YYYY - HH:mm:ss" : true }}
+        </ng-template>
+      </div>
+    </nighthawk-table>
+  </div>
+
+  <div class="block">
+    <h1>Demo code</h1>
+
+    <nighthawk-tabs [plainTabsContent]="true" tabsButtonSize="small">
+      <nighthawk-tab tabLabel="HTML">
+        <nighthawk-highlight [code]="htmlCode" language="html" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="TypeScript">
+        <nighthawk-highlight [code]="tsCode" language="typescript" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="SCSS">
+        <nighthawk-highlight [code]="scssCode" language="scss" />
+      </nighthawk-tab>
+    </nighthawk-tabs>
+  </div>
+
+  <div class="block">
+    <h1>Table inputs</h1>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"><strong>Option</strong></th>
+            <th scope="col"><strong>Type</strong></th>
+            <th scope="col"><strong>Default value</strong></th>
+            <th scope="col"><strong>Possible values</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>config</strong></td>
+            <td>object</td>
+            <td>-</td>
+            <td>
+              <a
+                href="https://github.com/aeternumanonymi/nighthawk-angular-devkit/blob/main/projects/nighthawk-angular-devkit/src/lib/components/table/table.component.ts#L47v"
+                target="_blank"
+                >View on GitHub</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td><strong>data</strong></td>
+            <td>object[]</td>
+            <td><strong>[]</strong></td>
+            <td>array of objects</td>
+          </tr>
+          <tr>
+            <td><strong>fetchUrl</strong></td>
+            <td>string</td>
+            <td>-</td>
+            <td>any string</td>
+          </tr>
+          <tr>
+            <td><strong>showTotal</strong></td>
+            <td>boolean</td>
+            <td><strong>true</strong></td>
+            <td>true/false</td>
+          </tr>
+          <tr>
+            <td><strong>maxTableHeight</strong></td>
+            <td>number</td>
+            <td><strong>740</strong></td>
+            <td>any number (pixels)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Table outputs</h1>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"><strong>Event</strong></th>
+            <th scope="col"><strong>Type</strong></th>
+            <th scope="col"><strong>Value</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>onQueryData</strong></td>
+            <td>object</td>
+            <td>Emits selected sort/search values</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Style Variables</h1>
+
+    <nighthawk-highlight [code]="scssVariables" language="scss" />
+  </div>
+</app-layout>

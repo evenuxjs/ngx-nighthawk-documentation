@@ -1,0 +1,25 @@
+@import "ngx-nighthawk/styles/mixins";
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+  border-radius: 8px;
+
+  &.single-slide {
+    height: 400px;
+  }
+
+  &.multi-slide {
+    height: 160px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    background-color: var(--highlight-color);
+  }
+}
+
+.tab-buttons button {
+  font-size: 11px;
+}

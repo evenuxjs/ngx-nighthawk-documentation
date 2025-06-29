@@ -1,0 +1,79 @@
+<app-layout heading="Changelog">
+  <div class="block">
+    <h1>👋🏼 Public release v8.0.0</h1>
+    <p class="mb-0">Version 8.0.0 updated to Angular 20.0.5 - includes some minor bug fixes and new features.</p>
+
+    <p class="mb-3">We've also made this "documentation" page source code public for everyone to use for any purpose.</p>
+
+    <strong>List of changes for v8.0.0:</strong>
+
+    <ul class="mb-0">
+      <li>* Replaced moment-timezone with Luxon</li>
+      <li>* Created a global config for translating phrases used in the UI elements</li>
+      <li>* Date selector default years are now dynamic, instead of hardcoded</li>
+      <li>* Calendar component default year is now dynamic, instead of hardcoded</li>
+      <li>* Checkboxes now have "isEnabled" input option</li>
+      <li>* Multi-select now correctly sets options selected by default (initally), as selected</li>
+      <li>* Quantity selector now has maxQuantity input option and onQuantityChange output emitter</li>
+      <li>* Select component now correctly handles default/initially selected value</li>
+      <li>* Table component now correctly includes default config values for initial data request(s)</li>
+      <li>* Dropdown trigger directive now has "isOpen" Input, and "isOpenChange/dropdownClosed" Output event emitters.</li>
+      <li>* Lightbox instances are now unique and handle all events correctly per instance</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h1>👋🏼 Public release v 7.0.20</h1>
+    <p class="mb-3">
+      Version 7.0.20 has extended the functionality of the
+      <strong>Table</strong> component.
+    </p>
+
+    <ul class="mb-0">
+      <li>* Make it possible to show/hide the table header/footer</li>
+      <li>* Make it possible to re-order the table rows with click-and-drag</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h1>👋🏼 Public release v 7.0.0</h1>
+    <p class="mb-5">
+      Version 7.0.0 is the first public release of this library. Full list of features can be found below. If you'd like something to be
+      added to this library, then please open an issue on
+      <a href="https://github.com/evenuxjs/ngx-nighthawk/issues" target="_blank">GitHub</a>.
+    </p>
+
+    <h1>General features</h1>
+    <p class="mb-2"><strong>* Page loader</strong></p>
+    <p class="mb-5">
+      Page loader is the essential core part of this library - it will wait for the page to finish loading all images (both "img" tags and
+      background-images). It will also wait for all specified fonts to be loaded. You can set a minimum amount of time for the loader to be
+      shown for, regardless of whether the loader has already actually finished loading. So for example, if you set "minimumLoaderTime" to
+      1000ms, but the page takes 300ms to load, it will "load" the page for 1000ms before hiding the loader. If you so wish, you can also
+      call the NighthawkBootstrapService::pageLoaded() function, to manually mark the current page as "loaded".
+    </p>
+
+    <h1>Directives</h1>
+    <p class="mb-2">
+      <strong>* Buttons, Form Controls, Image Loader, In-View, Tooltip</strong>
+    </p>
+    <p class="mb-5">Some basic HTML directives.</p>
+
+    <h1>Pipes</h1>
+    <p class="mb-2"><strong>* Date Format, First Key</strong></p>
+    <p class="mb-5">Some basic Angular pipes.</p>
+
+    <h1>Services</h1>
+    <p class="mb-2"><strong>* Lightbox</strong></p>
+    <p class="mb-5">Basic lightbox / image viewer based on Swiper.</p>
+
+    <h1>Components</h1>
+    <p class="mb-2">
+      <strong
+        >* Calendar, Checkbox, Date Selector, Dialogs, Dropdown, Loader, Multiselect, Quantity Selector, Radios, Range Picker, Range Select,
+        Select, Swiper, Table, Tabs, Text Editor</strong
+      >
+    </p>
+    <p class="mb-5">Some basic Angular pipes.</p>
+  </div>
+</app-layout>

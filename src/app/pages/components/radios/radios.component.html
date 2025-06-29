@@ -1,0 +1,99 @@
+<app-layout heading="Radios">
+  <div class="block">
+    <h1>Preview</h1>
+
+    <div class="mb-3">
+      <nighthawk-radios size="large" [options]="radioOptions" [(ngModel)]="largeRadioOptionValue" />
+    </div>
+
+    <div class="mb-3">
+      <nighthawk-radios size="medium" [options]="radioOptions" [(ngModel)]="mediumRadioOptionValue" />
+    </div>
+
+    <div>
+      <nighthawk-radios size="small" [options]="radioOptions" [(ngModel)]="smallRadioOptionValue" />
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Demo code</h1>
+
+    <nighthawk-tabs [plainTabsContent]="true" tabsButtonSize="small">
+      <nighthawk-tab tabLabel="HTML">
+        <nighthawk-highlight [code]="htmlCode" language="html" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="TypeScript">
+        <nighthawk-highlight [code]="tsCode" language="typescript" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="SCSS">
+        <nighthawk-highlight [code]="scssCode" language="scss" />
+      </nighthawk-tab>
+    </nighthawk-tabs>
+  </div>
+
+  <div class="block">
+    <h1>Inputs</h1>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"><strong>Option</strong></th>
+            <th scope="col"><strong>Type</strong></th>
+            <th scope="col"><strong>Default value</strong></th>
+            <th scope="col"><strong>Possible values</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>size</strong></td>
+            <td>enum</td>
+            <td><strong>medium</strong></td>
+            <td>small/medium/large</td>
+          </tr>
+          <tr>
+            <td><strong>options</strong></td>
+            <td>object[]</td>
+            <td><strong>-</strong></td>
+            <td>{{ "{ label: string; value: any; disabled?: boolean }[]" }}</td>
+          </tr>
+          <tr>
+            <td><strong>disabled</strong></td>
+            <td>boolean</td>
+            <td><strong>false</strong></td>
+            <td>true/false</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Outputs</h1>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"><strong>Event</strong></th>
+            <th scope="col"><strong>Type</strong></th>
+            <th scope="col"><strong>Value</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>onValueChange</strong></td>
+            <td>any</td>
+            <td>Emits the 'checked' radio value</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Style Variables</h1>
+
+    <nighthawk-highlight [code]="scssVariables" language="scss" />
+  </div>
+</app-layout>

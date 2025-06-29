@@ -1,0 +1,105 @@
+<app-layout heading="Swiper">
+  <div class="block d-none d-lg-block">
+    <h1>Preview (single slide)</h1>
+
+    <nighthawk-swiper class="swiper-single" [config]="singleSlideSwiperConfig">
+      @for (slide of [].constructor(5); let i = $index; track i) {
+        <div class="swiper-slide single-slide">
+          <h5>Slide {{ i + 1 }}</h5>
+        </div>
+      }
+    </nighthawk-swiper>
+  </div>
+
+  <div class="block">
+    <h1>Preview (multiple slides)</h1>
+
+    <nighthawk-swiper class="swiper-multi" [config]="multiSlideSwiperConfig">
+      @for (slide of [].constructor(12); let i = $index; track i) {
+        <div class="swiper-slide multi-slide">
+          <h5>Slide {{ i + 1 }}</h5>
+        </div>
+      }
+    </nighthawk-swiper>
+  </div>
+
+  <div class="block">
+    <h1>Demo code</h1>
+
+    <nighthawk-tabs [plainTabsContent]="true" tabsButtonSize="small">
+      <nighthawk-tab tabLabel="HTML">
+        <nighthawk-highlight [code]="htmlCode" language="html" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="TypeScript">
+        <nighthawk-highlight [code]="tsCode" language="typescript" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="SCSS">
+        <nighthawk-highlight [code]="scssCode" language="scss" />
+      </nighthawk-tab>
+    </nighthawk-tabs>
+  </div>
+
+  <div class="block">
+    <h1>Inputs</h1>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"><strong>Option</strong></th>
+            <th scope="col"><strong>Type</strong></th>
+            <th scope="col"><strong>Default value</strong></th>
+            <th scope="col"><strong>Possible values</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>activeSlide</strong></td>
+            <td>number</td>
+            <td><strong>0</strong></td>
+            <td>any number</td>
+          </tr>
+          <tr>
+            <td><strong>config</strong></td>
+            <td>object</td>
+            <td><strong>-</strong></td>
+            <td>
+              <a href="https://swiperjs.com/swiper-api#parameters" target="_blank" style="text-decoration: underline"
+                >Check official Swiper.js docs</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Outputs</h1>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"><strong>Event</strong></th>
+            <th scope="col"><strong>Type</strong></th>
+            <th scope="col"><strong>Value</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>onSlideChange</strong></td>
+            <td>number</td>
+            <td>Emits the currently active slide index value</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Style Variables</h1>
+
+    <nighthawk-highlight [code]="scssVariables" language="scss" />
+  </div>
+</app-layout>

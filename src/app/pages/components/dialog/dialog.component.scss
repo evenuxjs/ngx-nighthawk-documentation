@@ -1,0 +1,11 @@
+@import "ngx-nighthawk/styles/mixins";
+
+@include media-breakpoint-down(lg) {
+  .row-buttons {
+    gap: 8px;
+
+    button {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+import { Routes } from "@angular/router";
+import { LandingComponent } from "./pages/main/landing/landing.component";
+import { QuickStartComponent } from "./pages/main/quick-start/quick-start.component";
+import { VariablesComponent } from "./pages/main/variables/variables.component";
+import { ThemesComponent } from "./pages/main/themes/themes.component";
+import { CalendarComponent } from "./pages/components/calendar/calendar.component";
+import { CheckboxComponent } from "./pages/components/checkbox/checkbox.component";
+import { DialogComponent } from "./pages/components/dialog/dialog.component";
+import { DropdownComponent } from "./pages/components/dropdown/dropdown.component";
+import { RangePickerComponent } from "./pages/components/range-picker/range-picker.component";
+import { RangeSelectComponent } from "./pages/components/range-select/range-select.component";
+import { SelectComponent } from "./pages/components/select/select.component";
+import { SwiperComponent } from "./pages/components/swiper/swiper.component";
+import { RadiosComponent } from "./pages/components/radios/radios.component";
+import { ButtonsComponent } from "./pages/directives/buttons/buttons.component";
+import { ControlsComponent } from "./pages/directives/controls/controls.component";
+import { DateSelectorComponent } from "./pages/components/date-selector/date-selector.component";
+import { TooltipComponent } from "./pages/directives/tooltip/tooltip.component";
+import { LoaderComponent } from "./pages/components/loader/loader.component";
+import { TextEditorComponent } from "./pages/components/text-editor/text-editor.component";
+import { QuantitySelectorComponent } from "./pages/components/quantity-selector/quantity-selector.component";
+import { LightboxComponent } from "./pages/services/lightbox/lightbox.component";
+import { MultiSelectComponent } from "./pages/components/multi-select/multi-select.component";
+import { TabsComponent } from "./pages/components/tabs/tabs.component";
+import { InViewComponent } from "./pages/directives/in-view/in-view.component";
+import { FirstKeyComponent } from "./pages/pipes/first-key/first-key.component";
+import { DateFormatComponent } from "./pages/pipes/date-format/date-format.component";
+import { TableComponent } from "./pages/components/table/table.component";
+import { ImageLoaderComponent } from "./pages/directives/image-loader/image-loader.component";
+import { IssuesComponent } from "./pages/main/issues/issues.component";
+import { ChangelogComponent } from "./pages/main/changelog/changelog.component";
+
+export const routes: Routes = [
+  { path: "", pathMatch: "full", component: LandingComponent },
+  { path: "quick-start", component: QuickStartComponent },
+  { path: "variables", component: VariablesComponent },
+  { path: "issues", component: IssuesComponent },
+  { path: "changelog", component: ChangelogComponent },
+  { path: "themes", component: ThemesComponent },
+  { path: "directives/buttons", component: ButtonsComponent },
+  { path: "directives/controls", component: ControlsComponent },
+  { path: "directives/tooltip", component: TooltipComponent },
+  { path: "directives/image-loader", component: ImageLoaderComponent },
+  { path: "directives/in-view", component: InViewComponent },
+  { path: "pipes/date-format", component: DateFormatComponent },
+  { path: "pipes/first-key", component: FirstKeyComponent },
+  { path: "services/lightbox", component: LightboxComponent },
+  { path: "components/multiselect", component: MultiSelectComponent },
+  { path: "components/calendar", component: CalendarComponent },
+  { path: "components/checkbox", component: CheckboxComponent },
+  { path: "components/table", component: TableComponent },
+  { path: "components/tabs", component: TabsComponent },
+  { path: "components/quantity-selector", component: QuantitySelectorComponent },
+  { path: "components/date-selector", component: DateSelectorComponent },
+  { path: "components/radios", component: RadiosComponent },
+  { path: "components/dialog", component: DialogComponent },
+  { path: "components/dropdown", component: DropdownComponent },
+  { path: "components/range-picker", component: RangePickerComponent },
+  { path: "components/range-select", component: RangeSelectComponent },
+  { path: "components/select", component: SelectComponent },
+  { path: "components/swiper", component: SwiperComponent },
+  { path: "components/loader", component: LoaderComponent },
+  { path: "components/text-editor", component: TextEditorComponent },
+  { path: "**", redirectTo: "" },
+];

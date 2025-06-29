@@ -1,0 +1,129 @@
+<div class="overlay" [class.visible]="isMobileMenuVisible || isUserMenuVisible" (click)="closeMenus()"></div>
+
+<div class="sidebar" [class.visible]="isMobileMenuVisible">
+  <img src="./images/logo-small.png" class="img-fluid mb-3" alt="Nighthawk" />
+  <h5>Getting started</h5>
+  <nav class="mb-3">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Introduction</a>
+    <a routerLink="/quick-start" routerLinkActive="active">Quick start</a>
+    <a routerLink="/issues" routerLinkActive="active">Issues</a>
+    <a routerLink="/changelog" routerLinkActive="active">Changelog</a>
+    <!--<a routerLink="/themes" routerLinkActive="active">Themes</a>-->
+  </nav>
+
+  <h5>Directives</h5>
+  <nav class="mb-3">
+    <a routerLink="/directives/buttons" routerLinkActive="active">Buttons</a>
+    <a routerLink="/directives/controls" routerLinkActive="active">Controls</a>
+    <a routerLink="/directives/image-loader" routerLinkActive="active">Image loader</a>
+    <a routerLink="/directives/in-view" routerLinkActive="active">In-View</a>
+    <a routerLink="/directives/tooltip" routerLinkActive="active">Tooltip</a>
+  </nav>
+
+  <h5>Pipes</h5>
+  <nav class="mb-3">
+    <a routerLink="/pipes/date-format" routerLinkActive="active">Date format</a>
+    <a routerLink="/pipes/first-key" routerLinkActive="active">First key</a>
+  </nav>
+
+  <h5>Services</h5>
+  <nav class="mb-3">
+    <a routerLink="/services/lightbox" routerLinkActive="active">Lightbox</a>
+  </nav>
+
+  <h5>Components</h5>
+  <nav>
+    <a routerLink="/components/calendar" routerLinkActive="active">Calendar</a>
+    <a routerLink="/components/checkbox" routerLinkActive="active">Checkbox</a>
+    <a routerLink="/components/date-selector" routerLinkActive="active">Date selector</a>
+    <a routerLink="/components/dialog" routerLinkActive="active">Dialogs</a>
+    <a routerLink="/components/dropdown" routerLinkActive="active">Dropdown</a>
+    <a routerLink="/components/loader" routerLinkActive="active">Loader</a>
+    <a routerLink="/components/multiselect" routerLinkActive="active">Multiselect</a>
+    <a routerLink="/components/quantity-selector" routerLinkActive="active">Quantity selector</a>
+    <a routerLink="/components/radios" routerLinkActive="active">Radios</a>
+    <a routerLink="/components/range-picker" routerLinkActive="active">Range picker</a>
+    <a routerLink="/components/range-select" routerLinkActive="active">Range select</a>
+    <a routerLink="/components/select" routerLinkActive="active">Select</a>
+    <a routerLink="/components/swiper" routerLinkActive="active">Swiper</a>
+    <a routerLink="/components/table" routerLinkActive="active">Table</a>
+    <a routerLink="/components/tabs" routerLinkActive="active">Tabs</a>
+    <a routerLink="/components/text-editor" routerLinkActive="active">Text editor</a>
+  </nav>
+</div>
+
+<div class="content">
+  <div class="mobile-header">
+    <div class="container-fluid px-0">
+      <div class="row align-items-center gx-2 mb-3">
+        <div class="col">
+          <img src="./images/logo-small.png" class="img-fluid" alt="Nighthawk" />
+        </div>
+        <div class="col-auto">
+          <button nighthawk-button color="transparent" size="small" [rounded]="true" [border]="true">v7.0.19</button>
+        </div>
+        <div class="col-auto">
+          <button
+            nighthawk-button
+            type="button"
+            color="transparent"
+            size="small"
+            [rounded]="true"
+            [border]="true"
+            (click)="toggleMobileMenu()"
+          >
+            <i class="f-117-icon-menu"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="desktop-header mb-3">
+    <div class="container-fluid">
+      <div class="row align-items-center gx-2">
+        <div class="col">
+          <h1 class="mb-0">{{ heading }}</h1>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <nighthawk-select
+            [options]="themes"
+            nameField="name"
+            valueField="value"
+            color="transparent"
+            size="small"
+            [rounded]="true"
+            [border]="true"
+            class="mb-3"
+            [(ngModel)]="selectedTheme"
+            (onOptionSelect)="onSelectTheme($event)"
+          />
+        </div>
+        <div class="col-auto">
+          <button nighthawk-button class="fw-bolder mb-3" color="transparent" size="small" [rounded]="true" [border]="true">v8.0.0</button>
+        </div>
+        <div class="col-auto">
+          <button
+            nighthawk-button
+            class="fw-bolder mb-3"
+            color="primary"
+            size="small"
+            [rounded]="true"
+            [border]="true"
+            (click)="openDonateDialog()"
+          >
+            <i class="f-117-icon-money"></i>
+            Donate to support
+          </button>
+        </div>
+        <div class="col-auto d-none d-md-block d-lg-none">
+          <button type="button" (click)="toggleMobileMenu()" class="mb-3" style="font-size: 21px">
+            <i class="f-117-icon-menu"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-content></ng-content>
+</div>

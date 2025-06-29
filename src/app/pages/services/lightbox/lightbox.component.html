@@ -1,0 +1,71 @@
+<app-layout heading="Lightbox">
+  <div class="block">
+    <h1>Preview</h1>
+
+    <div class="row gx-3 gy-3">
+      @for (image of images; let i = $index; track i) {
+        <div class="col-6 col-lg-3">
+          <img
+            nighthawk-image-loader
+            [imageSrc]="image"
+            [width]="2560"
+            [height]="1440"
+            class="img-fluid"
+            (click)="openLightbox(i)"
+            alt=""
+          />
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Demo code</h1>
+
+    <nighthawk-tabs [plainTabsContent]="true" tabsButtonSize="small">
+      <nighthawk-tab tabLabel="HTML">
+        <nighthawk-highlight [code]="htmlCode" language="html" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="TypeScript">
+        <nighthawk-highlight [code]="tsCode" language="typescript" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="SCSS">
+        <nighthawk-highlight [code]="scssCode" language="scss" />
+      </nighthawk-tab>
+    </nighthawk-tabs>
+  </div>
+
+  <div class="block">
+    <h1>NighthawkLightboxService::open()</h1>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"><strong>Param</strong></th>
+            <th scope="col"><strong>Type</strong></th>
+            <th scope="col"><strong>Description</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>images</strong></td>
+            <td>string[]</td>
+            <td>Array of images to display in the lightbox</td>
+          </tr>
+          <tr>
+            <td><strong>startIndex</strong></td>
+            <td>number</td>
+            <td>Index of image to be display, when lightbox opens</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Style Variables</h1>
+
+    <nighthawk-highlight [code]="scssVariables" language="scss" />
+  </div>
+</app-layout>

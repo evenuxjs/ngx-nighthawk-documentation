@@ -1,0 +1,142 @@
+<app-layout heading="Quick start">
+  <div class="block">
+    <h1>👉🏼 How to get started quickly?</h1>
+    <p>Clone the starter repository, by running the following command:</p>
+    <nighthawk-highlight [code]="clone" language="bash" />
+
+    <p>Then just simply go to the project directory, install packages and run the server:</p>
+    <nighthawk-highlight [code]="install" language="bash" />
+
+    <p>Feel free to configure any options in the app.component.ts file</p>
+    <p>
+      The source code for the starter repository can be
+      <a href="https://github.com/evenuxjs/ngx-nighthawk" target="_blank">found here</a>.
+    </p>
+  </div>
+
+  <div class="block">
+    <h1>👉🏼 How to create a new project?</h1>
+
+    <p>1. Install the Nighthawk Devkit by running the following command:</p>
+    <nighthawk-highlight [code]="npmInstall" language="bash" />
+
+    <p class="mb-2 mb-lg-0">
+      2. Import Nighthawk Devkit default styles file in your
+      <strong>styles.scss</strong> file, like so:
+    </p>
+    <nighthawk-highlight [code]="importDefaultStyles" language="scss" />
+
+    <p class="mb-2 mb-lg-0">3. Run a script that copies Nighthawk core assets into your public folder after, like so:</p>
+    <nighthawk-highlight [code]="copyNighthawkAssetsScript" language="bash" />
+
+    <p class="mb-2 mb-lg-0">
+      4. Wrap your &lt;router-outlet /&gt; (<strong>in app.component.ts</strong>) with a &lt;main&gt; tag, so it works with the page loader,
+      like so:
+    </p>
+    <nighthawk-highlight [code]="wrapRouterOutlet" language="html" />
+
+    <p class="mb-2 mb-lg-0">
+      5. Set the <strong>ViewContainerRef</strong> and bootstrap the Nighthawk application <strong>after view initialization</strong>, like
+      so:
+    </p>
+    <nighthawk-highlight [code]="initializeApplication" language="typescript" />
+
+    <p>
+      6. All done, you can now configure the page loader and style variables in your
+      <strong>theme.scss</strong> file.
+    </p>
+  </div>
+
+  <div class="block">
+    <h1>🫵🏼 Application configuration</h1>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"><strong>Option</strong></th>
+            <th scope="col"><strong>Type</strong></th>
+            <th scope="col"><strong>Description</strong></th>
+            <th scope="col"><strong>Default value</strong></th>
+            <th scope="col"><strong>Possible values</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>timezone</strong></td>
+            <td>string</td>
+            <td>Timezone to be used for date formatting</td>
+            <td><strong></strong></td>
+            <td>true/false</td>
+          </tr>
+          <tr>
+            <td><strong>databaseTimezone</strong></td>
+            <td>string</td>
+            <td>Database timezone to be used for date formatting</td>
+            <td><strong></strong></td>
+            <td>true/false</td>
+          </tr>
+          <tr>
+            <td><strong>pageLoaderEnabled</strong></td>
+            <td>boolean</td>
+            <td>Shows the loader on initial page load</td>
+            <td><strong>true</strong></td>
+            <td>true/false</td>
+          </tr>
+          <tr>
+            <td><strong>routeLoaderEnabled</strong></td>
+            <td>boolean</td>
+            <td>Shows the loader when switching routes</td>
+            <td><strong>false</strong></td>
+            <td>true/false</td>
+          </tr>
+          <tr>
+            <td><strong>pageLoaderType</strong></td>
+            <td>enum</td>
+            <td>Specifies which type of loader to use for page/route loading (fallback)</td>
+            <td><strong>-</strong></td>
+            <td>
+              'bouncing-ball', 'bouncing-circles', 'bouncing-squares', 'fade-stagger-circles', 'fade-stagger-squares', 'gear-spinner',
+              'infinite-spinner', 'motion-blur-2', 'ripples', 'tube-spinner', 'tube-spinner'
+            </td>
+          </tr>
+          <tr>
+            <td><strong>pageLoaderSize</strong></td>
+            <td>number</td>
+            <td>Page loader size in pixels</td>
+            <td><strong>16</strong></td>
+            <td>any number</td>
+          </tr>
+          <tr>
+            <td><strong>pageLoaderCustomImagePath</strong></td>
+            <td>boolean | string</td>
+            <td>Custom loader image path, overrides pageLoaderType</td>
+            <td><strong>-</strong></td>
+            <td>any string</td>
+          </tr>
+          <tr>
+            <td><strong>manualLoader</strong></td>
+            <td>boolean</td>
+            <td>Show loader until NighthawkBootstrapService::pageLoaded() is called</td>
+            <td><strong>false</strong></td>
+            <td>true/false</td>
+          </tr>
+          <tr>
+            <td><strong>minimumLoaderTime</strong></td>
+            <td>number</td>
+            <td>Minimum time that the initial page loader should be visible for in milliseconds</td>
+            <td><strong>1000</strong></td>
+            <td>500-infinite</td>
+          </tr>
+          <tr>
+            <td><strong>fonts</strong></td>
+            <td>string[]</td>
+            <td>List of fonts used on the page to check before loader can finish</td>
+            <td><strong>[]</strong></td>
+            <td>string[]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</app-layout>

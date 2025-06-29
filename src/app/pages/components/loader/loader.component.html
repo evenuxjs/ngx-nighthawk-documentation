@@ -1,0 +1,129 @@
+<app-layout heading="Loader">
+  <div class="block">
+    <h1>Preview</h1>
+
+    <div class="d-block">
+      <nighthawk-loader [size]="48" type="bouncing-ball" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="48" type="bouncing-circles" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="48" type="bouncing-squares" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="48" type="fade-stagger-circles" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="48" type="fade-stagger-squares" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="48" type="gear-spinner" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="48" type="infinite-spinner" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="48" type="motion-blur-2" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="48" type="ripples" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="48" type="tube-spinner" class="d-inline-block mb-5" />
+    </div>
+
+    <div class="d-block">
+      <nighthawk-loader [size]="32" type="bouncing-ball" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="32" type="bouncing-circles" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="32" type="bouncing-squares" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="32" type="fade-stagger-circles" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="32" type="fade-stagger-squares" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="32" type="gear-spinner" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="32" type="infinite-spinner" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="32" type="motion-blur-2" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="32" type="ripples" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="32" type="tube-spinner" class="d-inline-block mb-5" />
+    </div>
+
+    <div class="d-block">
+      <nighthawk-loader [size]="16" type="bouncing-ball" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="16" type="bouncing-circles" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="16" type="bouncing-squares" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="16" type="fade-stagger-circles" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="16" type="fade-stagger-squares" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="16" type="gear-spinner" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="16" type="infinite-spinner" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="16" type="motion-blur-2" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="16" type="ripples" class="d-inline-block me-3" />
+      <nighthawk-loader [size]="16" type="tube-spinner" class="d-inline-block mb-5" />
+    </div>
+
+    <p class="mb-0">All the loaders are taken from this page, feel free to check them out:</p>
+    <a href="https://www.svgbackgrounds.com/elements/animated-svg-preloaders/" target="_blank" class="d-block mb-5">
+      www.svgbackgrounds.com/elements/animated-svg-preloaders/
+    </a>
+
+    <h1>Customize</h1>
+    <p>You can specify any image like svg or gif as the source, overriding the default loader type.</p>
+    <nighthawk-loader [size]="48" customLoaderImagePath="./images/fire-flame.gif" class="d-inline-block me-3" />
+    <nighthawk-loader [size]="32" customLoaderImagePath="./images/fire-flame.gif" class="d-inline-block me-3" />
+    <nighthawk-loader [size]="16" customLoaderImagePath="./images/fire-flame.gif" class="d-inline-block" />
+  </div>
+
+  <div class="block">
+    <h1>Demo code</h1>
+
+    <nighthawk-tabs [plainTabsContent]="true" tabsButtonSize="small">
+      <nighthawk-tab tabLabel="HTML">
+        <nighthawk-highlight [code]="htmlCode" language="html" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="TypeScript">
+        <nighthawk-highlight [code]="tsCode" language="typescript" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="SCSS">
+        <nighthawk-highlight [code]="scssCode" language="scss" />
+      </nighthawk-tab>
+    </nighthawk-tabs>
+  </div>
+
+  <div class="block">
+    <h1>Inputs</h1>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"><strong>Option</strong></th>
+            <th scope="col"><strong>Type</strong></th>
+            <th scope="col"><strong>Default value</strong></th>
+            <th scope="col"><strong>Possible values</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>size</strong></td>
+            <td>number</td>
+            <td><strong>16</strong></td>
+            <td>0-infinite</td>
+          </tr>
+          <tr>
+            <td><strong>width</strong></td>
+            <td>number</td>
+            <td><strong>0</strong></td>
+            <td>0-infinite (overrides size)</td>
+          </tr>
+          <tr>
+            <td><strong>height</strong></td>
+            <td>number</td>
+            <td><strong>0</strong></td>
+            <td>0-infinite (overrides size)</td>
+          </tr>
+          <tr>
+            <td><strong>type</strong></td>
+            <td>enum</td>
+            <td><strong>tube-spinner</strong></td>
+            <td>
+              'bouncing-ball', 'bouncing-circles', 'bouncing-squares', 'fade-stagger-circles', 'fade-stagger-squares', 'gear-spinner',
+              'infinite-spinner', 'motion-blur-2', 'ripples', 'tube-spinner', 'tube-spinner'
+            </td>
+          </tr>
+          <tr>
+            <td><strong>customLoaderImagePath</strong></td>
+            <td>string</td>
+            <td><strong>-</strong></td>
+            <td>any string (path)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Style Variables</h1>
+
+    <nighthawk-highlight [code]="scssVariables" language="scss" />
+  </div>
+</app-layout>

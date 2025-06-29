@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'f-117-icon-kit';
+  src: url('../font/f-117-icon-kit.eot?87658280');
+  src: url('../font/f-117-icon-kit.eot?87658280#iefix') format('embedded-opentype'),
+       url('../font/f-117-icon-kit.woff2?87658280') format('woff2'),
+       url('../font/f-117-icon-kit.woff?87658280') format('woff'),
+       url('../font/f-117-icon-kit.ttf?87658280') format('truetype'),
+       url('../font/f-117-icon-kit.svg?87658280#f-117-icon-kit') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'f-117-icon-kit';
+    src: url('../font/f-117-icon-kit.svg?87658280#f-117-icon-kit') format('svg');
+  }
+}
+*/
+[class^="f-117-icon-"]:before, [class*=" f-117-icon-"]:before {
+  font-family: "f-117-icon-kit";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.f-117-icon-heart:before { content: '\e800'; } /* '' */
+.f-117-icon-flow-branch:before { content: '\e801'; } /* '' */
+.f-117-icon-minus:before { content: '\e802'; } /* '' */
+.f-117-icon-plus:before { content: '\e803'; } /* '' */
+.f-117-icon-user-outline:before { content: '\e804'; } /* '' */
+.f-117-icon-down-dir:before { content: '\e805'; } /* '' */
+.f-117-icon-right:before { content: '\e806'; } /* '' */
+.f-117-icon-basket:before { content: '\e807'; } /* '' */
+.f-117-icon-logout:before { content: '\e808'; } /* '' */
+.f-117-icon-discord:before { content: '\e809'; } /* '' */
+.f-117-icon-money:before { content: '\e80a'; } /* '' */
+.f-117-icon-menu:before { content: '\f0c9'; } /* '' */
+.f-117-icon-download-cloud:before { content: '\f0ed'; } /* '' */
+.f-117-icon-upload-cloud:before { content: '\f0ee'; } /* '' */
+.f-117-icon-fighter-jet:before { content: '\f0fb'; } /* '' */
+.f-117-icon-angle-left:before { content: '\f104'; } /* '' */
+.f-117-icon-angle-right:before { content: '\f105'; } /* '' */
+.f-117-icon-angle-up:before { content: '\f106'; } /* '' */
+.f-117-icon-angle-down:before { content: '\f107'; } /* '' */
+.f-117-icon-code:before { content: '\f121'; } /* '' */
+.f-117-icon-slack:before { content: '\f198'; } /* '' */

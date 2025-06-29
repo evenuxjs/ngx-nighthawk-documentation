@@ -1,0 +1,233 @@
+@import "ngx-nighthawk/styles/mixins";
+
+.overlay {
+  display: block;
+  backdrop-filter: blur(5px);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease-in-out;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 1;
+  }
+}
+
+.sidebar {
+  background-color: var(--background-color);
+  border-right: 1px solid var(--accent-color);
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  transition: transform 0.35s ease-in-out;
+  z-index: 111;
+  padding-bottom: 60px;
+
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color);
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 3px;
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    & {
+      scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbary-track-color);
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+    max-width: 300px;
+    transform: translateX(-300px);
+  }
+
+  &.visible {
+    transform: translateX(0);
+  }
+
+  img {
+    max-width: 200px;
+
+    @include media-breakpoint-down(lg) {
+      max-width: 160px;
+    }
+  }
+
+  h5 {
+    font-size: 14px;
+    font-family: "Dosis", sans-serif;
+    color: var(--sidebar-category-color);
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 8px;
+    margin-bottom: 6px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      position: relative;
+      color: var(--text-color);
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 2px;
+      padding-left: 28px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 18px;
+        left: 10px;
+        width: 6px;
+        height: 6px;
+        border: 1px solid #6e6e6e;
+        transform: rotate(45deg);
+        background-color: transparent;
+        border-radius: 0;
+      }
+
+      &.active,
+      &:hover {
+        background-color: var(--highlight-color);
+        color: var(--link-active-color);
+
+        &::before {
+          border-color: var(--link-active-color);
+        }
+      }
+    }
+  }
+}
+
+.content {
+  margin-left: 280px;
+  padding: 14px;
+  padding-bottom: 80px;
+  flex-grow: 1;
+
+  @include media-breakpoint-down(lg) {
+    margin-left: 0;
+  }
+
+  .mobile-header {
+    display: none;
+
+    @include media-breakpoint-down(md) {
+      display: flex;
+      border-bottom: 1px solid var(--accent-color);
+      margin-bottom: 14px;
+    }
+
+    img {
+      max-width: 140px;
+    }
+
+    button {
+      color: var(--primary-color);
+      font-size: 18px;
+    }
+
+    .f-117-icon-down-dir {
+      font-size: 13px;
+      vertical-align: text-bottom;
+    }
+  }
+
+  .desktop-header {
+    border-bottom: 1px solid var(--accent-color);
+    margin-bottom: 0;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
+    h1 {
+      height: 32px;
+      font-size: 21px;
+      font-weight: bold;
+      font-family: "Dosis", sans-serif;
+      color: var(--heading-color);
+    }
+
+    nighthawk-select {
+      max-width: 180px;
+    }
+
+    .user-button {
+      border-color: var(--primary-color);
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+  }
+}
+
+.mobile-user-menu {
+  position: fixed;
+  top: 80px;
+  width: calc(100% - 32px);
+  left: 16px;
+  background-color: var(--background-color);
+  padding: 48px 0;
+  text-align: center;
+  border-radius: 40px;
+  border: 1px solid #fcb8597d;
+  transform: translateY(calc(-100% - 100px));
+  transition: all 0.5s ease-in-out;
+
+  &.visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+    z-index: 2;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+.user-dropdown-header {
+  width: 220px;
+  color: var(--primary-color);
+
+  p {
+    width: 220px;
+    border-bottom: 1px dashed var(--primary-color);
+    padding-bottom: 8px;
+  }
+}
+
+.user-dropdown-nav {
+  width: 220px;
+  gap: 12px;
+
+  a {
+    cursor: pointer;
+    color: var(--text-color);
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}

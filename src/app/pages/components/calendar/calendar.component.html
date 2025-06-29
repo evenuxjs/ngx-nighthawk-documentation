@@ -1,0 +1,110 @@
+<app-layout heading="Calendar">
+  <div class="block">
+    <h1>Preview</h1>
+
+    <div class="row">
+      <div class="col-9 d-none d-xl-block">
+        <nighthawk-calendar [month]="0" [year]="2038" [startDayOfWeek]="1" size="large" />
+      </div>
+      <div class="col-12 col-xl-3">
+        <nighthawk-calendar [month]="0" [year]="2038" [startDayOfWeek]="1" [dayNames]="['M', 'T', 'W', 'T', 'F', 'S', 'S']" size="small" />
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Demo code</h1>
+
+    <nighthawk-tabs [plainTabsContent]="true" tabsButtonSize="small">
+      <nighthawk-tab tabLabel="HTML">
+        <nighthawk-highlight [code]="htmlCode" language="html" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="TypeScript">
+        <nighthawk-highlight [code]="tsCode" language="typescript" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="SCSS">
+        <nighthawk-highlight [code]="scssCode" language="scss" />
+      </nighthawk-tab>
+    </nighthawk-tabs>
+  </div>
+
+  <div class="block">
+    <h1>Inputs</h1>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"><strong>Option</strong></th>
+            <th scope="col"><strong>Type</strong></th>
+            <th scope="col"><strong>Default value</strong></th>
+            <th scope="col"><strong>Possible values</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>month</strong></td>
+            <td>number</td>
+            <td><strong>0</strong></td>
+            <td>0-11</td>
+          </tr>
+          <tr>
+            <td><strong>year</strong></td>
+            <td>number</td>
+            <td><strong>2024</strong></td>
+            <td>0-2038</td>
+          </tr>
+          <tr>
+            <td><strong>size</strong></td>
+            <td>enum</td>
+            <td><strong>small</strong></td>
+            <td>small/large</td>
+          </tr>
+          <tr>
+            <td><strong>startDayOfWeek</strong></td>
+            <td>number</td>
+            <td><strong>1</strong></td>
+            <td>0-6 (0 is sunday)</td>
+          </tr>
+          <tr>
+            <td><strong>dayNames</strong></td>
+            <td>string[]</td>
+            <td>
+              <strong>['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']</strong>
+            </td>
+            <td>any string[]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Outputs</h1>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"><strong>Event</strong></th>
+            <th scope="col"><strong>Type</strong></th>
+            <th scope="col"><strong>Value</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>selectedDay</strong></td>
+            <td>object</td>
+            <td>Selected date ({{ "{day, month, year}" }})</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Style Variables</h1>
+
+    <nighthawk-highlight [code]="scssVariables" language="scss" />
+  </div>
+</app-layout>

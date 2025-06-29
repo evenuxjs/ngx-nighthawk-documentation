@@ -1,0 +1,156 @@
+<app-layout heading="Dialogs">
+  <div class="block">
+    <h1>Preview</h1>
+
+    <div class="row row-buttons gx-lg-2">
+      <div class="col-12 col-lg-auto">
+        <button
+          nighthawk-button
+          type="button"
+          color="primary"
+          size="medium"
+          [rounded]="true"
+          [border]="true"
+          (click)="requestConfirmation()"
+        >
+          Request confirmation
+        </button>
+      </div>
+      <div class="col-12 col-lg-auto">
+        <button nighthawk-button type="button" color="primary" size="medium" [rounded]="true" [border]="true" (click)="showNotification()">
+          Show notification
+        </button>
+      </div>
+      <div class="col-12 col-lg-auto">
+        <button nighthawk-button type="button" color="primary" size="medium" [rounded]="true" [border]="true" (click)="openDialog()">
+          Open custom dialog
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Demo code</h1>
+
+    <nighthawk-tabs [plainTabsContent]="true" tabsButtonSize="small">
+      <nighthawk-tab tabLabel="HTML">
+        <nighthawk-highlight [code]="htmlCode" language="html" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="TypeScript">
+        <nighthawk-highlight [code]="tsCode" language="typescript" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="SCSS">
+        <nighthawk-highlight [code]="scssCode" language="scss" />
+      </nighthawk-tab>
+    </nighthawk-tabs>
+  </div>
+
+  <div class="block">
+    <h1>NotificationService::show()</h1>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"><strong>Param</strong></th>
+            <th scope="col"><strong>Type</strong></th>
+            <th scope="col"><strong>Description</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>title</strong></td>
+            <td>string</td>
+            <td>Title of the dialog</td>
+          </tr>
+          <tr>
+            <td><strong>text</strong></td>
+            <td>string</td>
+            <td>Text to display in the dialog</td>
+          </tr>
+          <tr>
+            <td><strong>closeText</strong></td>
+            <td>string</td>
+            <td>Close button label</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>ConfirmationService::show()</h1>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"><strong>Param</strong></th>
+            <th scope="col"><strong>Type</strong></th>
+            <th scope="col"><strong>Description</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>title</strong></td>
+            <td>string</td>
+            <td>Title of the dialog</td>
+          </tr>
+          <tr>
+            <td><strong>text</strong></td>
+            <td>string</td>
+            <td>Text to display in the dialog</td>
+          </tr>
+          <tr>
+            <td><strong>submitText</strong></td>
+            <td>string</td>
+            <td>Submit button label</td>
+          </tr>
+          <tr>
+            <td><strong>cancelText</strong></td>
+            <td>string</td>
+            <td>Cancel button label</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>DialogService::open()</h1>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"><strong>Param</strong></th>
+            <th scope="col"><strong>Type</strong></th>
+            <th scope="col"><strong>Description</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>reference</strong></td>
+            <td>componentOrTemplateRef</td>
+            <td>Reference to a component or template</td>
+          </tr>
+          <tr>
+            <td><strong>config</strong></td>
+            <td>DialogConfig</td>
+            <td>
+              <a href="https://material.angular.io/cdk/dialog/api#DialogConfig" target="_blank" style="text-decoration: underline"
+                >Check official Angular CDK docs</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="block">
+    <h1>Style Variables</h1>
+
+    <nighthawk-highlight [code]="scssVariables" language="scss" />
+  </div>
+</app-layout>

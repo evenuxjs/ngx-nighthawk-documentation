@@ -1,0 +1,45 @@
+<app-layout heading="Date format">
+  <div class="block">
+    <h1>Preview</h1>
+
+    <p class="mb-0">
+      Date format pipe takes into account the
+      <strong>timezone and locale</strong> defined in the app config.
+    </p>
+    <p>
+      You opened this page at (current time):
+      <strong>{{ now | dateFormat: "DD.MM.YYYY - HH:mm:ss" }}</strong>
+    </p>
+
+    <p class="mb-0">
+      If your database is in another timezone, you can simply set the
+      <strong>isDatabaseTimezone</strong> boolean to <strong>true</strong>.
+    </p>
+    <p>
+      For example, if your <strong>database is in UTC</strong>, then the datetime is:
+      <strong>{{
+        now
+          | dateFormat
+            : "DD.MM.YYYY -
+                HH:mm:ss"
+            : true
+      }}</strong>
+    </p>
+  </div>
+
+  <div class="block">
+    <h1>Demo code</h1>
+
+    <nighthawk-tabs [plainTabsContent]="true" tabsButtonSize="small">
+      <nighthawk-tab tabLabel="HTML">
+        <nighthawk-highlight [code]="htmlCode" language="html" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="TypeScript">
+        <nighthawk-highlight [code]="tsCode" language="typescript" />
+      </nighthawk-tab>
+      <nighthawk-tab tabLabel="SCSS">
+        <nighthawk-highlight [code]="scssCode" language="scss" />
+      </nighthawk-tab>
+    </nighthawk-tabs>
+  </div>
+</app-layout>

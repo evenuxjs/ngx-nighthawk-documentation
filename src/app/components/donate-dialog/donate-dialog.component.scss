@@ -1,0 +1,39 @@
+@import "ngx-nighthawk/styles/mixins";
+
+::ng-deep {
+  .purchase-dialog .dialog-content {
+    max-width: 640px;
+    padding: 42px 42px;
+    padding-bottom: 60px;
+    position: relative;
+
+    @include media-breakpoint-down(lg) {
+      padding: 32px 20px;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 21px;
+      color: var(--primary-color);
+      cursor: pointer;
+
+      @include media-breakpoint-down(lg) {
+        top: 18px;
+      }
+    }
+
+    h5 {
+      color: var(--primary-color);
+    }
+
+    input {
+      background-color: var(--background-color);
+    }
+
+    strong {
+      color: var(--primary-color);
+    }
+  }
+}
